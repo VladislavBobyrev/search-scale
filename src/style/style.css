@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 0;
+}
+
+img,
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+audio,
+canvas,
+iframe,
+video,
+img,
+svg {
+  vertical-align: middle;
+}
+
+iframe {
+  border: 0;
+}
+
+textarea {
+  resize: none;
+  /*remove the resize handle on the bottom right*/
+  overflow: auto;
+  vertical-align: top;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+  border: none;
+  font-size: 100%;
+  margin: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+html[data-theme=dark] {
+  --color-basic:#0c0c0c;
+  --color-basic-75:#0c0c0cf8;
+  --color-primary:#383838;
+  --color-primary-75:#393939BF;
+  --color-secondary:#EBEBEB;
+  --color-secondary-50:#4a556d80;
+  --color-accent:#37B3EC;
+  --bg-basic:#0c0c0c;
+  --bg-basic-75:#0c0c0cf8;
+  --bg-primary:#383838;
+  --bg-primary-75:#393939BF;
+  --bg-secondary:#EBEBEB;
+  --bg-secondary-50:#4a556d80;
+  --bg-accent:#37B3EC;
+  --neutral:#c4c4c4;
+  --neutral-50:#c4c4c40f;
+  --select-primary:#FFFFFF;
+  --linear-gradient: linear-gradient(146.22deg, #24a6e4 6.48%, #2a337d 155.29%);
+  --placeholder:#f4f4f4bf;
+  --box-shadow:0px 4px 15px #0000001a;
+}
+
+html {
+  --color-basic:#f8f8f8;
+  --color-basic-75:#edeff5fa;
+  --color-primary:#F6F6F6;
+  --color-primary-75:#f4f4f4bf;
+  --color-secondary:#4A556D;
+  --color-secondary-50:#4a556d80;
+  --color-accent:#37B3EC;
+  --bg-basic:#f8f8f8;
+  --bg-basic-75:#edeff5fa;
+  --bg-primary:#F6F6F6;
+  --bg-primary-75:#f4f4f4bf;
+  --bg-secondary:#4A556D;
+  --bg-secondary-50:#4a556d80;
+  --bg-accent:#1B99D5;
+  --neutral:#c4c4c4;
+  --neutral-50:#c4c4c442;
+  --select-primary:#FFFFFF;
+  --linear-gradient: linear-gradient(146.22deg, #24a6e4 6.48%, #2a337d 155.29%);
+  --placeholder:#f4f4f4bf;
+  --box-shadow:0px 4px 15px #0000001a;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-button {
+  display: none;
+  background: none;
+  size: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-50);
+  border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neutral-50);
+}
+*::-webkit-resizer {
+  display: none;
+  background: none;
+  size: 10px;
+  height: 10px;
+}
+
+@media (max-width: 62em) {
+  *::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  *::-webkit-scrollbar-button {
+    display: none;
+    background: none;
+    size: 0;
+    height: 0;
+  }
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 2px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--neutral-50);
+    border-radius: 2px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--neutral-50);
+  }
+  *::-webkit-resizer {
+    display: none;
+    background: none;
+    size: 0;
+    height: 0;
+  }
+}
+html {
+  display: flex;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+}
+
+html.color-theme-in-transition,
+html.color-theme-in-transition * {
+  transition: 200ms;
+  transition-delay: 0;
+}
+
+html[data-theme=dark] .blend {
+  filter: invert(100%) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  line-height: 1.5;
+  color: var(--color-secondary);
+  background: var(--bg-basic-75);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-accent);
+}
+
+.search {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  background: var(--bg-secondary);
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 5px #1b99d5;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.search .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  background: var(--bg-secondary);
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 1px #1b99d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.search .icon::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid #1b99d5;
+  border-radius: 50%;
+  transform: translate(-0.3rem, -0.3rem) rotate(315deg);
+}
+.search .icon::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 1rem;
+  background: #1b99d5;
+  transform: translate(0.7rem, 0.7rem) rotate(315deg);
+}
+
+.search.active {
+  width: 40rem;
+}
+.search.active .icon {
+  box-shadow: none;
+}
+
+.input {
+  position: relative;
+  height: 5rem;
+  left: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background: var(--bg-secondary);
+}
+
+.clear {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 1rem;
+  transform: translateY(-50%);
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.clear::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 1.5rem;
+  background: var(--bg-basic);
+  transform: rotate(315deg);
+}
+.clear::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 1.5rem;
+  background: var(--bg-basic);
+  transform: rotate(45deg);
+}
